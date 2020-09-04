@@ -23,16 +23,16 @@ jobs:
             - vendor
 
       # Test for CI
-    deploy:
-      machine:
-        enabled: true
-      steps:
-        - add_ssh_keys:
-            fingerprints:
-              - "6e:0a:6f:ba:8c:e9:fa:b0:fd:1c:cd:5f:38:49:7e:a9"
-        - run:
-            name: Deploy Over SSH
-            command: ssh -tt root@103.200.20.171 "cd /var/www/html/laravel && git pull origin master"
+  deploy:
+    machine:
+      enabled: true
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "6e:0a:6f:ba:8c:e9:fa:b0:fd:1c:cd:5f:38:49:7e:a9"
+      - run:
+          name: Deploy Over SSH
+          command: ssh -tt root@103.200.20.171 "cd /var/www/html/laravel && git pull origin master"
 
 workflows:
   version: 2
