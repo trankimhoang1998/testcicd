@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    CICD CICD
+                    CICD CICD CICD
                 </div>
 
                 <div class="links">
